@@ -24,7 +24,7 @@
 
     <h1 class='title rellax' data-rellax-speed="10">Anne-Lise</h1>
 
-    <div class="d-flex flex-column align-items-center justify-content-center rellax" style="padding-top: 200px" data-rellax-speed="10">
+    <div class="d-flex flex-column align-items-center justify-content-center rellax text" data-rellax-speed="10">
       <div class="w-75 p-3 text-center" >
         Ce projet est une collection capsule réalisée pour l’obtention de mon diplôme. La
         thématique de cette collection était la mémoire de la forme. Je me suis donc
@@ -41,7 +41,7 @@
 
     <div class="d-flex justify-content-center content">
       <div class="d-flex flex-row justify-content-around sub-content">
-        <div class="d-flex flex-column firstPicturesContainer">
+        <div class="d-flex flex-column firstPicturesContainer rellax" id="rellax" >
           <img class="littlePictures rellax" src="./assets/image/12.jpg" alt="" data-rellax-speed="10">
           <img class="littlePictures rellax" src="./assets/image/16.jpg" alt="" data-rellax-speed="10">
           <img class="littlePictures rellax" src="./assets/image/2.jpg" alt="" data-rellax-speed="10">
@@ -67,7 +67,16 @@
       </div>
     </div>
   
-    <script href="/src/index.js"></script>
+    <script>
+      const elementToToggles = document.querySelectorAll(".rellax");
+
+      if (window.innerWidth < 1000) {
+        elementToToggles.forEach(function(elementToToggle) {
+          elementToToggle.classList.remove("rellax");
+        })
+        
+      }
+    </script>
     <script src="rellax.min.js"></script>
     <script>
       // Accepts any class name

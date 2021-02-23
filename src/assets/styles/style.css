@@ -27,6 +27,10 @@ body {
   color: #020304 !important;
 }
 
+body .text {
+  padding-top: 200px;
+}
+
 body .title {
   pointer-events: none;
   font-size: 180px;
@@ -118,5 +122,55 @@ body .content .sub-content .littlePictures {
 body .content .sub-content .bigPictures {
   max-width: 30vw;
   margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  body .title {
+    padding-top: 70px;
+    font-size: 80px;
+    font-weight: bolder;
+  }
+  body .text {
+    padding-top: 150px;
+  }
+  body .content {
+    max-height: -webkit-max-content !important;
+    max-height: -moz-max-content !important;
+    max-height: max-content !important;
+  }
+  body .content .firstPicturesContainer {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
+  body .content .secondPicturesContainer {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
+  body .content .thirdPicturesContainer {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
+  body .content .sub-content {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: unset !important;
+        -ms-flex-pack: unset !important;
+            justify-content: unset !important;
+  }
+  .cv {
+    width: 100vw;
+    min-height: 100vh;
+  }
+  .cv .containerCV {
+    padding-top: 100px;
+  }
+  img {
+    max-width: 80vw !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

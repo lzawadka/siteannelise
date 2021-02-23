@@ -29,6 +29,10 @@ body {
   background-color: $beige !important;
   color: $blackColor !important;
 
+  .text {
+    padding-top: 200px;
+  }
+
   .title {
     pointer-events: none;
     font-size: 180px;
@@ -113,5 +117,54 @@ body {
         margin-bottom: 20px;
       }
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    .title {
+      padding-top: 70px;
+      font-size: 80px;
+      font-weight: bolder;
+    }
+
+    .text {
+      padding-top: 150px;
+    }
+
+    .content {
+      max-height: max-content !important;
+
+      .firstPicturesContainer {
+        transform: translateY(0vh);
+      }
+
+      .secondPicturesContainer {
+        transform: translateY(0vh);
+      }
+
+      .thirdPicturesContainer {
+        transform: translateY(0vh);
+      }
+
+      .sub-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: unset !important;
+      }
+    }
+  }
+
+  .cv {
+    width: 100vw;
+    min-height: 100vh;
+
+    .containerCV {
+      padding-top: 100px;
+    }
+  }
+
+  img {
+    max-width: 80vw !important;
   }
 }
